@@ -1,3 +1,3 @@
-module bitmask
+module github.com/najoast/bitmask
 
-go 1.18
+go 1.15
