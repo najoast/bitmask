@@ -6,6 +6,7 @@ type BitMask interface {
 	HasMask(index int) bool
 }
 
+// Create a limited bitmask.
 // If max exceeds 64,000, it is recommended to use unlimited BitMask instead
 func CreateLimitedBitMask(max int) BitMask {
 	if max <= 0 {
@@ -24,6 +25,7 @@ func CreateLimitedBitMask(max int) BitMask {
 	}
 }
 
+// Create an unlimited bitmask.
 func CreateUnlimitedBitMask() BitMask {
 	return &BitMaskMap{
 		data: make(map[int]uint64),
